@@ -19,10 +19,13 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.(jpg|jpeg|png|svg|ico|webp|gif)$/, type: "asset/resource" },
+      {
+        test: /\.(jpg|jpeg|png|svg|ico|webp|gif|otf)$/,
+        type: "asset/resource",
+      },
       { test: /\.ts$/, use: "ts-loader", exclude: /node_modules/ },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         include: path.resolve(__dirname, "src"),
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
@@ -45,7 +48,6 @@ module.exports = {
     watchFiles: ["./src/*"],
     static: DIST_PATH,
     compress: true,
-    open: true,
     hot: true,
   },
   performance: {
