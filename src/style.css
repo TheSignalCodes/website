@@ -63,11 +63,10 @@
 }
 
 html {
-  @apply text-cultured;
-  @apply bg-darkGunmetal;
   font-family: "Satoshi", sans-serif;
-
   font-size: 16px;
+
+  @apply text-cultured bg-darkGunmetal;
 }
 
 h1 {
@@ -83,28 +82,88 @@ h2 {
 }
 
 h3 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.75rem;
 }
 
-button {
-  @apply px-14;
-  @apply py-2;
-  @apply bg-redOrange;
-  @apply rounded-full;
+h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 
-  font-weight: 400;
+  @apply my-2 text-cheese;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+
+  @apply my-2 text-cheese;
+}
+
+h6 {
+  font-weight: 500;
   font-size: 1.5rem;
+  line-height: 1.5rem;
+
+  @apply my-2 text-cheese;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+button {
+  font-weight: 300;
+  font-size: 1.5rem;
+
+  @apply px-12 py-1.5 bg-redOrange rounded-full;
+}
+
+section {
+  @apply p-4;
+}
+
+.card-container {
+  @apply flex flex-row overflow-x-scroll snap-x scroll-smooth;
+}
+
+.card {
+  flex: 0 0 75%;
+
+  @apply bg-arsenic p-4 rounded-lg mr-5;
+}
+
+.card > h6 {
+  @apply min-h-20;
+}
+
+/* Decorations */
+
+.overline {
+  @apply w-[90px] h-[3px] bg-white;
 }
 
 .accent {
   mix-blend-mode: saturation;
+
+  @apply w-full overflow-x-hidden absolute -z-10;
 }
 
 .accent > div {
   background: radial-gradient(
     theme("colors.lightGunmetal"),
+    theme("colors.lightGunmetal"),
+    theme("colors.darkGunmetal"),
     theme("colors.darkGunmetal")
   );
+
+  @apply w-[650px] h-[650px];
+}
+
+.circle {
+  @apply w-[48px] h-[48px] bg-lavenderGray rounded-full absolute -top-6 right-8;
 }
