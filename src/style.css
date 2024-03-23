@@ -64,7 +64,7 @@
 
 html {
   font-family: "Satoshi", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
 
   @apply text-cultured bg-darkGunmetal;
 }
@@ -127,21 +127,77 @@ section {
   @apply p-4;
 }
 
-.card-container {
+a {
+  @apply text-cheese underline text-sm font-light;
+}
+
+/* -------- */
+/* Services */
+/* -------- */
+
+#services .cards {
+  scrollbar-width: none; /* Firefox */
+
   @apply flex flex-row overflow-x-scroll snap-x scroll-smooth;
 }
 
-.card {
+#services .cards::-webkit-scrollbar {
+  display: none;
+}
+
+#services .card {
   flex: 0 0 75%;
 
   @apply bg-arsenic p-4 rounded-lg mr-5;
 }
 
-.card > h6 {
+#services .card h6 {
   @apply min-h-20;
 }
 
+/* ----------- */
+/*     Us      */
+/* ----------- */
+
+#us .card {
+  flex: 0 0 75%;
+
+  @apply bg-onyx pt-4 pb-2 mb-5 rounded-lg;
+}
+
+/* ----------- */
+/* how-we-work */
+/* ----------- */
+
+#how-we-work .card {
+  @apply bg-onyx px-4 py-2 rounded-lg;
+}
+
+#how-we-work .underline {
+  @apply w-full h-[1px] bg-cheese;
+}
+
+/* ----------- */
+/* Companies */
+/* ----------- */
+
+#companies .logos {
+  @apply grid grid-cols-2 gap-y-5 gap-x-2 mt-8 items-center justify-center;
+}
+
+#companies .logos .logo {
+  @apply flex items-center justify-center text-center;
+}
+
+#companies .logos .logo img {
+  max-height: 28px;
+  max-width: 75%;
+  object-fit: contain;
+}
+
+/* ----------- */
 /* Decorations */
+/* ----------- */
 
 .overline {
   @apply w-[90px] h-[3px] bg-white;
