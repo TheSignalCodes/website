@@ -4,11 +4,11 @@
     theme(colors.starlingFeather / 0%)
   );
 
-  @apply flex flex-row h-[100px] items-center justify-between px-4;
+  @apply flex flex-row fixed h-[100px] items-center justify-between px-4 inset-0;
 }
 
 .menu {
-  @apply flex flex-row gap-2 items-center;
+  @apply flex flex-row gap-2 items-center cursor-pointer;
 }
 
 .menu p {

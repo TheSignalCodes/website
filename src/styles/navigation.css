@@ -1,0 +1,38 @@
+#navigation {
+  transition: right 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+  right: -100vw;
+
+  @apply h-full w-full fixed flex flex-col justify-between items-end px-6 py-12 overflow-hidden top-0 bg-cheese z-50;
+}
+
+#navigation a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  @apply relative w-fit text-darkGunmetal pb-4 capitalize text-end;
+}
+
+#navigation a:after {
+  background: none repeat scroll 0 0 transparent;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  bottom: 8px;
+  background: theme(colors.starlingFeather);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+#navigation a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+#navigation p {
+  font-weight: 500;
+
+  @apply text-darkGunmetal text-end;
+}

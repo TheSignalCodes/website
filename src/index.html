@@ -14,25 +14,50 @@
 
     <title>The Signal</title>
   </head>
-  <body>
-    <header class="header">
-      <img src="img/logo.svg" />
 
-      <div class="menu">
-        <p>Menu</p>
-        <img src="img/burger_menu.svg" />
+  <body>
+    <div class="accent">
+      <div></div>
+    </div>
+
+    <div class="accent top-[350vh]">
+      <div class="-translate-x-[300px]"></div>
+    </div>
+
+    <header class="relative z-50">
+      <div class="header">
+        <img src="img/logo.svg" />
+
+        <div id="open-menu" class="menu" aria-label="Menu">
+          <p>Menu</p>
+          <img src="img/burger_menu.svg" />
+        </div>
       </div>
     </header>
 
-    <section id="the-signal" class="flex-col">
-      <div class="accent">
-        <div></div>
+    <div id="navigation">
+      <div>
+        <div id="close-menu" class="menu justify-end" aria-label="Close menu">
+          <p class="text-darkGunmetal">Close</p>
+          <img src="img/close.svg" />
+        </div>
+
+        <nav class="flex flex-col mt-20 mr-6 items-end">
+          <a href="#the-signal">The Signal</a>
+          <a href="#values">Our Values</a>
+          <a href="#services">Our Services</a>
+          <a href="#us">Meet the Collective</a>
+          <a href="#how-we-work">How We Work</a>
+          <a href="#why-us">Why Choosing Us</a>
+        </nav>
       </div>
 
-      <div class="accent top-[350vh]">
-        <div class="-translate-x-[300px]"></div>
-      </div>
+      <footer>
+        <p>© 2023<br />The Signal. <br />All rights reserved.</p>
+      </footer>
+    </div>
 
+    <section id="the-signal" class="flex-col mt-28 z-40">
       <div class="flex flex-col mb-10 justify-center">
         <div class="mb-8">
           <div class="overline"></div>
@@ -64,7 +89,7 @@
       <h3 class="mt-5">
         We promote transparent communication and integrity in our interactions.
       </h3>
-
+      <!--
       <div class="relative h-[400px]">
         <div class="relative mt-10 mb-4">
           <div class="orbit orbit1 h-[390px]">
@@ -96,7 +121,7 @@
             src="img/values_statue.png"
           />
         </div>
-      </div>
+      </div> -->
 
       <div>
         <h5>Simplicity</h5>
@@ -322,7 +347,7 @@
       </div>
     </section>
 
-    <section id="companies">
+    <section id="why-us">
       <h5 class="text-center">We’ve worked for top-tier Companies</h5>
 
       <div class="logos">
