@@ -1,0 +1,5 @@
+#us .card {
+  flex: 0 0 75%;
+
+  @apply bg-onyx pt-4 pb-2 mb-5 rounded-lg;
+}

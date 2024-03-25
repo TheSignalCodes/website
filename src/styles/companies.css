@@ -1,0 +1,13 @@
+#companies .logos {
+  @apply grid grid-cols-2 gap-y-5 gap-x-2 mt-8 items-center justify-center;
+}
+
+#companies .logos .logo {
+  @apply flex items-center justify-center text-center;
+}
+
+#companies .logos .logo img {
+  max-height: 28px;
+  max-width: 75%;
+  object-fit: contain;
+}

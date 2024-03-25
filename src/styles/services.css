@@ -1,0 +1,19 @@
+#services .cards {
+  scrollbar-width: none; /* Firefox */
+
+  @apply flex flex-row overflow-x-scroll snap-x scroll-smooth;
+}
+
+#services .cards::-webkit-scrollbar {
+  display: none;
+}
+
+#services .card {
+  flex: 0 0 75%;
+
+  @apply bg-arsenic p-4 rounded-lg mr-5;
+}
+
+#services .card h6 {
+  @apply min-h-20;
+}

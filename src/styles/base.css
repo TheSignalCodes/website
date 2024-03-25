@@ -1,0 +1,75 @@
+html {
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+
+  @apply text-cultured bg-darkGunmetal;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.875rem;
+  line-height: 100%;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 100%;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+
+  @apply my-2 text-cheese;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+
+  @apply my-2 text-cheese;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+
+  @apply my-2 text-cheese;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+button {
+  font-weight: 300;
+  font-size: 1.5rem;
+  transition: background-color 0.1s, transform 0.1s;
+
+  @apply px-12 py-1.5 bg-redOrange rounded-full;
+}
+
+button:hover {
+  background-color: theme(colors.redOrange / 80%);
+  transform: translateY(-2px);
+  @apply drop-shadow-md;
+}
+
+section {
+  @apply p-4;
+}
+
+a {
+  @apply text-cheese underline text-sm font-light;
+}

@@ -1,0 +1,7 @@
+#how-we-work .card {
+  @apply bg-onyx px-4 py-2 rounded-lg;
+}
+
+#how-we-work .underline {
+  @apply w-full h-[1px] bg-cheese;
+}

@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 900;
+  src: url("/public/fonts/satoshi/Satoshi-Black.otf");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 900;
+  font-style: italic;
+  src: url("/public/fonts/satoshi/Satoshi-BlackItalic.otf");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 700;
+  src: url("/public/fonts/satoshi/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 700;
+  font-style: italic;
+  src: url("/public/fonts/satoshi/Satoshi-BoldItalic.otf");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 500;
+  src: url("/public/fonts/satoshi/Satoshi-Medium.otf");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 500;
+  font-style: italic;
+  src: url("/public/fonts/satoshi/Satoshi-MediumItalic.otf");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 400;
+  src: url("/public/fonts/satoshi/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 400;
+  font-style: italic;
+  src: url("/public/fonts/satoshi/Satoshi-Italic.otf");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 300;
+  src: url("/public/fonts/satoshi/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 300;
+  font-style: italic;
+  src: url("/public/fonts/satoshi/Satoshi-LightItalic.otf");
+}

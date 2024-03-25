@@ -1,0 +1,21 @@
+.header {
+  background: linear-gradient(
+    theme(colors.starlingFeather),
+    theme(colors.starlingFeather / 0%)
+  );
+
+  @apply flex flex-row h-[100px] items-center justify-between px-4;
+}
+
+.menu {
+  @apply flex flex-row gap-2 items-center;
+}
+
+.menu p {
+  font-family: "Figree", sans-serif;
+  font-weight: 300;
+  font-size: 0.63rem;
+  letter-spacing: 0.1rem;
+
+  @apply uppercase;
+}
