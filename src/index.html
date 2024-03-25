@@ -4,19 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree&display=swap"
+      rel="stylesheet"
+    />
+
     <title>The Signal</title>
   </head>
   <body>
-    <div class="accent">
-      <div></div>
-    </div>
+    <header class="header">
+      <img src="img/logo.svg" />
 
-    <div class="accent top-[350vh]">
-      <div class="-translate-x-[300px]"></div>
-    </div>
+      <div class="menu">
+        <p>Menu</p>
+        <img src="img/burger_menu.svg" />
+      </div>
+    </header>
 
     <section id="the-signal" class="flex-col">
-      <div class="mb-10">
+      <div class="accent">
+        <div></div>
+      </div>
+
+      <div class="accent top-[350vh]">
+        <div class="-translate-x-[300px]"></div>
+      </div>
+
+      <div class="flex flex-col mb-10 justify-center">
         <div class="mb-8">
           <div class="overline"></div>
           <h2 class="mt-2">We are</h2>
@@ -48,7 +65,38 @@
         We promote transparent communication and integrity in our interactions.
       </h3>
 
-      <img class="mt-10 mb-4" src="img/values.png" />
+      <div class="relative h-[400px]">
+        <div class="relative mt-10 mb-4">
+          <div class="orbit orbit1 h-[390px]">
+            <div class="planet planet1"></div>
+          </div>
+
+          <div class="orbit orbit2">
+            <div class="planet planet2"></div>
+          </div>
+
+          <div class="orbit orbit3">
+            <div class="planet planet3"></div>
+          </div>
+
+          <div class="orbit orbit4">
+            <div class="planet planet4"></div>
+          </div>
+
+          <img
+            class="absolute z-0"
+            height="390"
+            width="390"
+            src="img/values_orbits.png"
+          />
+          <img
+            class="absolute z-10"
+            height="390"
+            width="390"
+            src="img/values_statue.png"
+          />
+        </div>
+      </div>
 
       <div>
         <h5>Simplicity</h5>
@@ -81,7 +129,7 @@
     </section>
 
     <section id="services" class="px-0">
-      <div class="px-4">
+      <div class="flex flex-col px-4 justify-center">
         <h4 class="uppercase">Our services</h4>
 
         <h3 class="mt-5">
