@@ -2,6 +2,16 @@
   scrollbar-width: none; /* Firefox */
 
   @apply flex flex-row overflow-x-scroll snap-x scroll-smooth;
+
+  @media screen(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @media screen(lg) {
+    display: flex;
+  }
 }
 
 #services .cards::-webkit-scrollbar {
@@ -12,6 +22,14 @@
   flex: 0 0 75%;
 
   @apply bg-arsenic p-4 rounded-lg mr-5;
+
+  @media screen(md) {
+    margin: 0;
+  }
+
+  @media screen(lg) {
+    flex: 1;
+  }
 }
 
 #services .card h6 {

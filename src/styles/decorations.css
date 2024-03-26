@@ -1,5 +1,9 @@
 .overline {
   @apply w-[90px] h-[3px] bg-white;
+
+  @media screen(lg) {
+    height: 5px;
+  }
 }
 
 .accent {
@@ -17,10 +21,20 @@
   );
 
   @apply w-[650px] h-[650px];
+
+  @media screen(lg) {
+    width: 1300px;
+    height: 1300px;
+  }
 }
 
 .circle {
-  @apply w-[48px] h-[48px] bg-lavenderGray rounded-full absolute -top-6 right-8;
+  @apply w-[48px] h-[48px] bg-lavenderGray rounded-full absolute;
+
+  @media screen(lg) {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 .orbit {

@@ -1,5 +1,10 @@
 #how-we-work .card {
   @apply bg-onyx px-4 py-2 rounded-lg;
+
+  @media screen(lg) {
+    border-radius: 24px;
+    padding: 32px;
+  }
 }
 
 #how-we-work .underline {

@@ -5,10 +5,19 @@
   );
 
   @apply flex flex-row fixed h-[100px] items-center justify-between px-4 inset-0;
+
+  @media screen(lg) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
 
 .menu {
   @apply flex flex-row gap-2 items-center cursor-pointer;
+
+  @media screen(lg) {
+    display: none;
+  }
 }
 
 .menu p {

@@ -3,24 +3,49 @@ html {
   font-size: 16px;
 
   @apply text-cultured bg-darkGunmetal;
+
+  @media screen(lg) {
+    font-size: 20px;
+  }
+}
+
+body {
+  @media screen(lg) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 h1 {
   font-weight: 700;
   font-size: 2.875rem;
   line-height: 100%;
+
+  @media screen(lg) {
+    font-size: 4.6rem;
+  }
 }
 
 h2 {
   font-weight: 700;
   font-size: 1.75rem;
   line-height: 100%;
+
+  @media screen(lg) {
+    font-size: 2.1rem;
+  }
 }
 
 h3 {
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.75rem;
+
+  @media screen(lg) {
+    font-size: 2.1rem;
+    line-height: 2.2rem;
+  }
 }
 
 h4 {
@@ -29,6 +54,11 @@ h4 {
   line-height: 1.5rem;
 
   @apply my-2 text-cheese;
+
+  @media screen(lg) {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
 }
 
 h5 {
@@ -37,6 +67,12 @@ h5 {
   line-height: 1.25rem;
 
   @apply my-2 text-cheese;
+
+  @media screen(lg) {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
 }
 
 h6 {
@@ -58,6 +94,10 @@ button {
   transition: background-color 0.1s, transform 0.1s;
 
   @apply px-12 py-1.5 bg-redOrange rounded-full;
+
+  @media screen(lg) {
+    font-size: 1.2rem;
+  }
 }
 
 button:hover {
@@ -68,8 +108,23 @@ button:hover {
 
 section {
   @apply p-4;
+
+  @media screen(lg) {
+    padding: 0;
+    margin: 80px;
+    margin-top: 0px;
+    max-width: 1280px;
+  }
 }
 
 a {
   @apply text-cheese underline text-sm font-light;
+}
+
+nav a {
+  @media screen(lg) {
+    text-decoration: none;
+    color: theme(colors.cultured);
+    font-weight: 500;
+  }
 }
