@@ -2,7 +2,7 @@ html {
   font-family: "Satoshi", sans-serif;
   font-size: 16px;
 
-  @apply text-cultured bg-darkGunmetal;
+  @apply text-cultured bg-darkGunmetal overflow-x-hidden;
 
   @media screen(lg) {
     font-size: 20px;
@@ -10,6 +10,8 @@ html {
 }
 
 body {
+  @apply overflow-x-hidden;
+
   @media screen(lg) {
     display: flex;
     flex-direction: column;
@@ -116,8 +118,16 @@ section {
   }
 }
 
+section:target {
+  margin-top: 100px;
+}
+
 a {
   @apply text-cheese underline text-sm font-light;
+}
+
+nav {
+  z-index: 999;
 }
 
 nav a {

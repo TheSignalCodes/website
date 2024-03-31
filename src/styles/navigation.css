@@ -2,7 +2,7 @@
   transition: right 0.2s cubic-bezier(0.33, 1, 0.68, 1);
   right: -100vw;
 
-  @apply h-full w-full fixed flex flex-col justify-between items-end px-6 py-12 overflow-hidden top-0 bg-cheese z-50;
+  @apply h-full w-full fixed flex flex-col justify-between items-end px-6 py-8 overflow-hidden top-0 bg-cheese z-50;
 }
 
 #navigation a {
