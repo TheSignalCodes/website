@@ -1,7 +1,7 @@
 #services .cards {
   scrollbar-width: none; /* Firefox */
 
-  @apply flex flex-row overflow-x-scroll snap-x scroll-smooth;
+  @apply flex snap-x flex-row overflow-x-scroll scroll-smooth;
 
   @media screen(md) {
     display: grid;
@@ -21,7 +21,7 @@
 #services .card {
   flex: 0 0 75%;
 
-  @apply bg-arsenic p-4 rounded-lg mr-5;
+  @apply mr-5 rounded-lg bg-arsenic p-4;
 
   @media screen(md) {
     margin: 0;

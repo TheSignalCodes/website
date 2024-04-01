@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((navLink) =>
     navLink.addEventListener("click", () => {
       navigation.style.right = "-100vw";
-    })
+    }),
   );
 
   window.addEventListener("scroll", () => {

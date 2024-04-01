@@ -1,7 +1,7 @@
 #us .card {
   flex: 0 0 75%;
 
-  @apply bg-onyx pt-4 pb-2 mb-5 rounded-lg;
+  @apply mb-5 rounded-lg bg-onyx pb-2 pt-4;
 
   @media screen(lg) {
     flex: 1;

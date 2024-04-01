@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,14 +17,14 @@
 
   <body>
     <div class="accent">
-      <div class="lg:translate-x-[35vw] lg:-translate-y-[150px]"></div>
+      <div class="lg:-translate-y-[150px] lg:translate-x-[35vw]"></div>
     </div>
 
     <div class="accent top-[350vh] lg:top-[3200px]">
       <div class="-translate-x-[300px] lg:-translate-x-[15vw]"></div>
     </div>
 
-    <div class="accent hidden top-[350vh] lg:top-[4600px] lg:block">
+    <div class="accent top-[350vh] hidden lg:top-[4600px] lg:block">
       <div class="lg:translate-x-[45vw]"></div>
     </div>
 
@@ -56,7 +56,7 @@
           <img src="img/close.svg" />
         </div>
 
-        <nav class="flex flex-col mt-20 mr-6 items-end">
+        <nav class="mr-6 mt-20 flex flex-col items-end">
           <a href="#the-signal">The Signal</a>
           <a href="#values">Our Values</a>
           <a href="#services">Our Services</a>
@@ -71,9 +71,9 @@
       </footer>
     </div>
 
-    <section id="the-signal" class="flex-col mt-28 z-40">
-      <div class="flex flex-col mb-10 justify-center lg:flex-row lg:mb-32">
-        <div class="flex flex-col flex-1 mb-8">
+    <section id="the-signal" class="z-40 mt-28 flex-col">
+      <div class="mb-10 flex flex-col justify-center lg:mb-32 lg:flex-row">
+        <div class="mb-8 flex flex-1 flex-col">
           <div class="overline"></div>
           <h2 class="mt-2">We are</h2>
           <h2 class="text-cheese">The Signal.</h2>
@@ -88,7 +88,7 @@
         </div>
       </div>
 
-      <p class="text-2xl font-normal lg:text-5xl lg:w-11/12 lg:self-start">
+      <p class="text-2xl font-normal lg:w-11/12 lg:self-start lg:text-5xl">
         We build strong, scalable software systems at the heart of products your
         users love. We understand that
         <span class="font-bold text-cheese"
@@ -100,7 +100,7 @@
 
     <section
       id="values"
-      class="mt-14 bg-onyx rounded-xl relative lg:mt-20 lg:mx-[80px] lg:px-10 lg:py-6"
+      class="relative mt-14 rounded-xl bg-onyx lg:mx-[80px] lg:mt-20 lg:px-10 lg:py-6"
     >
       <div class="circle -top-6 right-8 lg:hidden"></div>
 
@@ -110,22 +110,22 @@
       </h3>
 
       <div
-        class="relative values-statue aspect-square w-full lg:absolute lg:right-0 lg:z-40 lg:w-[540px] lg:-top-32"
+        class="values-statue relative aspect-square w-full lg:absolute lg:-top-32 lg:right-0 lg:z-40 lg:w-[540px]"
       >
-        <div class="relative w-full h-full">
-          <div class="orbit orbit1 w-full h-full">
+        <div class="relative h-full w-full">
+          <div class="orbit orbit1 h-full w-full">
             <div class="planet planet1"></div>
           </div>
 
-          <div class="orbit orbit2 w-full h-full">
+          <div class="orbit orbit2 h-full w-full">
             <div class="planet planet2"></div>
           </div>
 
-          <div class="orbit orbit3 w-full h-full">
+          <div class="orbit orbit3 h-full w-full">
             <div class="planet planet3"></div>
           </div>
 
-          <div class="orbit orbit4 w-full h-full">
+          <div class="orbit orbit4 h-full w-full">
             <div class="planet planet4"></div>
           </div>
 
@@ -134,7 +134,7 @@
         </div>
       </div>
 
-      <div class="lg:grid lg:grid-cols-2 lg:w-2/3 lg:mt-10 lg:gap-x-6">
+      <div class="lg:mt-10 lg:grid lg:w-2/3 lg:grid-cols-2 lg:gap-x-6">
         <div>
           <h5>Simplicity</h5>
           <p class="mb-5">
@@ -174,7 +174,7 @@
 
     <section id="services" class="px-0">
       <div
-        class="flex flex-col px-4 justify-center lg:flex-row lg:items-center"
+        class="flex flex-col justify-center px-4 lg:flex-row lg:items-center"
       >
         <div class="lg:flex-1">
           <h4 class="uppercase">Our services</h4>
@@ -186,7 +186,7 @@
         </div>
 
         <div class="lg:flex lg:flex-1 lg:justify-center">
-          <img class="w-full mt-10 mb-4 max-w-[400px]" src="img/services.png" />
+          <img class="mb-4 mt-10 w-full max-w-[400px]" src="img/services.png" />
         </div>
       </div>
       <div class="cards">
@@ -238,19 +238,19 @@
         </div>
       </div>
 
-      <div class="flex justify-center mt-12">
+      <div class="mt-12 flex justify-center">
         <button class="">Let's Talk</button>
       </div>
     </section>
 
     <section id="us">
-      <h4 class="uppercase w-2/3 lg:max-w-[260px]">Meet The Collective</h4>
+      <h4 class="w-2/3 uppercase lg:max-w-[260px]">Meet The Collective</h4>
 
       <div class="lg:flex lg:flex-row lg:gap-4">
         <div class="card lg:mt-24">
           <img src="img/miguel.png" />
 
-          <div class="bg-onyx rounded-xl px-4 pt-2 relative -top-4">
+          <div class="relative -top-4 rounded-xl bg-onyx px-4 pt-2">
             <h4>Miguel Fernández</h4>
             <p class="my-4">
               <b>Backend engineer</b> known for his expertise in developing
@@ -263,7 +263,7 @@
         <div class="card">
           <img src="img/abby.png" />
 
-          <div class="bg-onyx rounded-xl px-4 pt-2 relative -top-4">
+          <div class="relative -top-4 rounded-xl bg-onyx px-4 pt-2">
             <h4>Abby Sassel</h4>
             <p class="my-4">
               <b>Full-Stack Senior Software Engineer</b> and Tech Lead,
@@ -277,7 +277,7 @@
         <div class="card lg:mt-24">
           <img src="img/sergio.png" />
 
-          <div class="bg-onyx rounded-xl px-4 pt-2 relative -top-4">
+          <div class="relative -top-4 rounded-xl bg-onyx px-4 pt-2">
             <h4>Sergio Gutiérrez</h4>
             <p class="my-4">
               Experienced <b>software developer</b>. His expertise encompasses a
@@ -291,7 +291,7 @@
         <div class="card">
           <img src="img/ernesto.png" />
 
-          <div class="bg-onyx rounded-xl px-4 pt-2 relative -top-4">
+          <div class="relative -top-4 rounded-xl bg-onyx px-4 pt-2">
             <h4>Ernesto Jiménez</h4>
             <p class="my-4">
               <b>Exceptional leadership skills</b>. He is honored as a Google
@@ -307,9 +307,9 @@
     <section id="how-we-work" class="lg:relative">
       <h4 class="uppercase">How we work</h4>
 
-      <div class="hidden lg:block circle right-6 top-0"></div>
+      <div class="circle right-6 top-0 hidden lg:block"></div>
 
-      <div class="lg:flex lg:flex-row lg:gap-10 lg:mt-20">
+      <div class="lg:mt-20 lg:flex lg:flex-row lg:gap-10">
         <div class="mb-12">
           <h5>Initial Conversation</h5>
           <p class="mb-5">
@@ -332,7 +332,7 @@
 
         <div class="card relative lg:h-fit">
           <img
-            class="absolute right-5 -top-6 w-1/2 lg:max-w-[280px] lg:-top-28 lg:left-1/4"
+            class="absolute -top-6 right-5 w-1/2 lg:-top-28 lg:left-1/4 lg:max-w-[280px]"
             src="img/pricing.png"
           />
 
@@ -343,17 +343,17 @@
           <div class="lg:flex lg:flex-row lg:items-center">
             <div class="lg:flex-[2]">
               <p class="mt-4 font-medium">Hourly Rate</p>
-              <p class="text-5xl font-bold lg:text-6xl lg:mb-6 lg:mt-2">
+              <p class="text-5xl font-bold lg:mb-6 lg:mt-2 lg:text-6xl">
                 175<span class="text-2xl"> $USD</span>
               </p>
 
               <p class="mt-4 font-medium">1st Month Hourly Rate</p>
-              <p class="text-5xl font-bold lg:text-6xl lg:mt-2">
+              <p class="text-5xl font-bold lg:mt-2 lg:text-6xl">
                 100<span class="text-2xl"> $USD</span>
               </p>
             </div>
 
-            <p class="mt-4 mb-2 lg:flex-[3]">
+            <p class="mb-2 mt-4 lg:flex-[3]">
               We have a transparent <b>hourly rate of $USD 175</b>, billed every
               second week. For the
               <b>first month, we offer a reduced rate of $USD 100</b>. This
@@ -368,15 +368,15 @@
 
     <section
       id="why-us"
-      class="mt-6 bg-onyx rounded-xl relative lg:mt-20 lg:mx-[80px] lg:px-10 lg:pt-6"
+      class="relative mt-6 rounded-xl bg-onyx lg:mx-[80px] lg:mt-20 lg:px-10 lg:pt-6"
     >
       <h4 class="uppercase lg:max-w-[260px]">Why choosing us</h4>
 
-      <div class="lg:hidden lg:right-0 lg:-top-16">
+      <div class="lg:-top-16 lg:right-0 lg:hidden">
         <img src="img/why-us.png" class="pr-6 lg:max-w-[400px]" />
       </div>
 
-      <div class="mb-12 lg:mb-0 lg:flex lg:flex-row lg:gap-6 lg:mt-10">
+      <div class="mb-12 lg:mb-0 lg:mt-10 lg:flex lg:flex-row lg:gap-6">
         <div>
           <h5>Expertise and Efficiency</h5>
           <p class="mb-5 lg:mb-0">
@@ -397,7 +397,7 @@
           </p>
         </div>
 
-        <div class="hidden lg:block lg:relative lg:-top-[252px]">
+        <div class="hidden lg:relative lg:-top-[252px] lg:block">
           <img src="img/why-us.png" class="lg:max-w-[400px]" />
         </div>
       </div>
@@ -435,19 +435,56 @@
         >.
       </h3>
 
-      <div class="flex justify-center mt-10 lg:mt-32">
+      <div class="mt-10 flex justify-center lg:mt-32">
         <button>Let's Talk</button>
       </div>
 
-      <div class="flex flex-col items-center mt-10 lg:mt-32">
+      <div class="mt-10 flex flex-col items-center lg:mt-32">
         <img src="img/mail.svg" width="32px" />
-        <a href="mailto:contact@thesignal.team" class="text-cultured text-xl"
+        <a href="mailto:contact@thesignal.team" class="text-xl text-cultured"
           >contact@thesignal.team</a
         >
       </div>
     </section>
 
-    <footer class="flex flex-col items-center mt-10 mb-4">
+    <section id="contact" class="fixed inset-20 z-50 m-0">
+      <div class="fixed inset-0 -z-10 bg-black/50 backdrop-blur"></div>
+
+      <div class="flex h-full w-full flex-row overflow-clip rounded-xl bg-onyx">
+        <div class="flex-1 p-20">
+          <div class="overline"></div>
+          <h2 class="mt-2">We are</h2>
+          <h2 class="text-cheese">The Signal.</h2>
+
+          <h3 class="mt-8 lg:mt-10">
+            Let’s craft a unicorn together. Tell us what you want to achieve and
+            we'll become part of your team
+          </h3>
+
+          <p class="mt-10 text-xs text-lavenderGray">
+            We use the information provided in this form to contact you. We will
+            never share your data with third parties unless legally required.
+            You can exercise your right to manage your data by sending an email
+            to data@thesignal.com. Please reade our
+            <a href="" class="text-xs font-medium text-lavenderGray"
+              >Privacy Policy</a
+            >.
+          </p>
+        </div>
+
+        <div class="flex-1 bg-arsenic p-20">
+          <div
+            class="flex cursor-pointer flex-row"
+            aria-label="Close contact form"
+          >
+            <p>Close</p>
+            <img src="img/close.svg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mb-4 mt-10 flex flex-col items-center">
       <img src="img/footer_logo.png" class="w-1/3" />
       <p class="mt-4 text-xs font-bold">
         © 2024. The Signal. All rights reserved.

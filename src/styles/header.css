@@ -1,7 +1,7 @@
 #header {
   transition: top 0.2s ease-in-out;
 
-  @apply flex flex-row fixed w-svw h-[100px] items-center justify-between px-4 inset-0;
+  @apply fixed inset-0 flex h-[100px] w-svw flex-row items-center justify-between px-4;
 
   @media screen(lg) {
     padding-left: 6rem;
@@ -28,7 +28,7 @@
 }
 
 .menu {
-  @apply flex flex-row gap-2 items-center cursor-pointer;
+  @apply flex cursor-pointer flex-row items-center gap-2;
 
   @media screen(lg) {
     display: none;

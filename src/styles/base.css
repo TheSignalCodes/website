@@ -2,7 +2,7 @@ html {
   font-family: "Satoshi", sans-serif;
   font-size: 16px;
 
-  @apply text-cultured bg-darkGunmetal overflow-x-hidden;
+  @apply overflow-x-hidden bg-darkGunmetal text-cultured;
 
   @media screen(lg) {
     font-size: 20px;
@@ -92,9 +92,11 @@ p {
 button {
   font-weight: 300;
   font-size: 1.5rem;
-  transition: background-color 0.1s, transform 0.1s;
+  transition:
+    background-color 0.1s,
+    transform 0.1s;
 
-  @apply px-12 py-1.5 bg-redOrange rounded-full;
+  @apply rounded-full bg-redOrange px-12 py-1.5;
 
   @media screen(lg) {
     font-size: 1.2rem;
@@ -123,7 +125,7 @@ section:target {
 }
 
 a {
-  @apply text-cheese underline text-sm font-light;
+  @apply text-sm font-light text-cheese underline;
 }
 
 nav {
