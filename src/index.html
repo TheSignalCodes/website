@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#151723" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +16,7 @@
     <title>The Signal</title>
   </head>
 
-  <body>
+  <body class="preload">
     <div class="accent">
       <div class="lg:-translate-y-[150px] lg:translate-x-[35vw]"></div>
     </div>
@@ -34,7 +35,7 @@
         <img src="img/logo.svg" />
 
         <div id="open-menu" class="menu" aria-label="Open menu">
-          <p>Menu</p>
+          <p class="text-button">Menu</p>
           <img src="img/burger_menu.svg" />
         </div>
 
@@ -52,7 +53,7 @@
     <div id="navigation">
       <div>
         <div id="close-menu" class="menu justify-end" aria-label="Close menu">
-          <p class="text-darkGunmetal">Close</p>
+          <p class="text-button text-darkGunmetal">Close</p>
           <img src="img/close.svg" />
         </div>
 
@@ -80,7 +81,7 @@
 
           <h1 class="mt-8 lg:mt-10">We develop exceptional products.</h1>
 
-          <button class="mt-8 w-fit lg:mt-20">Let's Talk</button>
+          <button class="contact-button mt-8 w-fit lg:mt-20">Let's Talk</button>
         </div>
 
         <div class="lg:flex lg:flex-1 lg:items-center">
@@ -239,7 +240,7 @@
       </div>
 
       <div class="mt-12 flex justify-center">
-        <button class="">Let's Talk</button>
+        <button class="contact-button">Let's Talk</button>
       </div>
     </section>
 
@@ -436,7 +437,7 @@
       </h3>
 
       <div class="mt-10 flex justify-center lg:mt-32">
-        <button>Let's Talk</button>
+        <button class="contact-button">Let's Talk</button>
       </div>
 
       <div class="mt-10 flex flex-col items-center lg:mt-32">
@@ -447,11 +448,19 @@
       </div>
     </section>
 
-    <section id="contact" class="fixed inset-20 z-50 m-0">
-      <div class="fixed inset-0 -z-10 bg-black/50 backdrop-blur"></div>
+    <div
+      id="contact-form-overlay"
+      class="fixed inset-0 z-50 m-0 h-svh w-svw bg-black/50 backdrop-blur"
+    ></div>
 
-      <div class="flex h-full w-full flex-row overflow-clip rounded-xl bg-onyx">
-        <div class="flex-1 p-20">
+    <section
+      id="contact"
+      class="fixed inset-0 z-50 m-auto p-0 lg:inset-10 lg:p-1"
+    >
+      <div
+        class="flex h-full w-full flex-col overflow-clip bg-onyx lg:min-h-[600px] lg:flex-row lg:rounded-xl"
+      >
+        <div class="p-8 lg:flex-1 lg:p-20">
           <div class="overline"></div>
           <h2 class="mt-2">We are</h2>
           <h2 class="text-cheese">The Signal.</h2>
@@ -461,7 +470,8 @@
             we'll become part of your team
           </h3>
 
-          <p class="mt-10 text-xs text-lavenderGray">
+          <!-- This block is repeated below, this one is displayed only in lg or larger sizes -->
+          <p class="mt-10 hidden text-xs text-lavenderGray lg:block">
             We use the information provided in this form to contact you. We will
             never share your data with third parties unless legally required.
             You can exercise your right to manage your data by sending an email
@@ -472,14 +482,75 @@
           </p>
         </div>
 
-        <div class="flex-1 bg-arsenic p-20">
+        <div class="px-10 lg:flex-1 lg:bg-arsenic lg:p-16">
           <div
-            class="flex cursor-pointer flex-row"
+            id="close-contact-form"
+            class="absolute right-8 top-8 flex cursor-pointer flex-row items-center justify-end lg:relative lg:-mr-14 lg:-mt-14"
             aria-label="Close contact form"
           >
-            <p>Close</p>
-            <img src="img/close.svg" />
+            <p class="text-button mr-2">Close</p>
+            <img class="filter-white" src="img/close_white.svg" />
           </div>
+
+          <form class="flex flex-col lg:mt-32">
+            <div class="relative">
+              <img
+                src="img/full-name.svg"
+                class="absolute left-2.5 top-[0.8rem] lg:top-2.5"
+              />
+              <input
+                id="full-name"
+                type="text"
+                class="text-md w-full rounded-sm bg-center p-2 pl-[2.25rem] text-darkGunmetal placeholder-arsenic lg:pl-8 lg:text-xs"
+                placeholder="Full Name"
+              />
+            </div>
+
+            <div class="relative mt-4">
+              <img
+                src="img/email.svg"
+                class="absolute left-2.5 top-[0.85rem] lg:top-3"
+              />
+              <input
+                type="email"
+                class="text-md w-full rounded-sm p-2 pl-[2.25rem] text-darkGunmetal placeholder-arsenic lg:pl-8 lg:text-xs"
+                placeholder="Email"
+              />
+            </div>
+
+            <div class="relative mt-4">
+              <p
+                id="contact-message-character-count"
+                class="text-md absolute bottom-2 right-2 text-arsenic opacity-50 lg:text-xs"
+              >
+                0 / 225
+              </p>
+              <textarea
+                id="contact-message"
+                class="text-md min-h-40 w-full rounded-sm p-3 text-darkGunmetal placeholder-arsenic lg:min-h-24 lg:p-2 lg:text-xs"
+                maxlength="225"
+                placeholder="What do you want to talk about?"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="contact-button text-md mt-4 w-full self-center rounded-full border border-lavenderGray px-6 text-lavenderGray lg:w-fit lg:text-sm"
+            >
+              Submit
+            </button>
+          </form>
+
+          <!-- This block is repeated above, this one is displayed only in sizes smaller than lg -->
+          <p class="mt-10 block text-xs text-lavenderGray lg:hidden">
+            We use the information provided in this form to contact you. We will
+            never share your data with third parties unless legally required.
+            You can exercise your right to manage your data by sending an email
+            to data@thesignal.com. Please reade our
+            <a href="" class="text-xs font-medium text-lavenderGray"
+              >Privacy Policy</a
+            >.
+          </p>
         </div>
       </div>
     </section>

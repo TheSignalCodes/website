@@ -2,6 +2,7 @@ import "./tailwind.css";
 import "./fonts.css";
 import "./base.css";
 
+import "./contact.css";
 import "./decorations.css";
 import "./header.css";
 import "./how-we-work.css";

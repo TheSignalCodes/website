@@ -105,7 +105,8 @@ button {
 
 button:hover {
   background-color: theme(colors.redOrange / 80%);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+
   @apply drop-shadow-md;
 }
 
@@ -138,4 +139,21 @@ nav a {
     color: theme(colors.cultured);
     font-weight: 500;
   }
+}
+
+textarea {
+  resize: none;
+}
+
+.text-button {
+  font-family: "Figree", sans-serif;
+  font-weight: 300;
+  font-size: 0.63rem;
+  letter-spacing: 0.1rem;
+
+  @apply uppercase;
+}
+
+.preload * {
+  transition: none !important;
 }

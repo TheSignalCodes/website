@@ -1,3 +1,7 @@
+:root {
+  --longest-orbit-time: 180s;
+}
+
 .overline {
   @apply h-[3px] w-[90px] bg-white;
 
@@ -56,33 +60,34 @@
 }
 
 .orbit1 {
-  animation-duration: 50s;
+  animation-duration: var(--longest-orbit-time);
 }
 
 .orbit2 {
-  animation-duration: 35s;
-  animation-delay: -15s;
+  animation-duration: calc(0.8 * var(--longest-orbit-time));
+  animation-delay: calc(-0.25 * var(--longest-orbit-time));
 }
 
 .orbit3 {
-  animation-duration: 20s;
-  animation-delay: -10s;
+  animation-duration: calc(0.6 * var(--longest-orbit-time));
+  animation-delay: calc(-0.25 * var(--longest-orbit-time));
 }
 
 .orbit4 {
-  animation-duration: 10s;
+  animation-duration: calc(0.4 * var(--longest-orbit-time));
+  animation-delay: calc(-0.85 * var(--longest-orbit-time));
 }
 
 .planet1 {
-  animation-duration: 50s;
+  animation-duration: var(--longest-orbit-time);
   offset-path: ellipse(42.5% 13.25% at 55.5% 42.5%);
 
   @apply h-[16px] w-[16px] bg-redOrange;
 }
 
 .planet2 {
-  animation-duration: 35s;
-  animation-delay: -15s;
+  animation-duration: calc(0.8 * var(--longest-orbit-time));
+  animation-delay: calc(-0.25 * var(--longest-orbit-time));
 
   offset-path: ellipse(36.25% 11.25% at 55.5% 42.5%);
 
@@ -90,8 +95,8 @@
 }
 
 .planet3 {
-  animation-duration: 20s;
-  animation-delay: -10s;
+  animation-duration: calc(0.6 * var(--longest-orbit-time));
+  animation-delay: calc(-0.25 * var(--longest-orbit-time));
 
   offset-path: ellipse(30% 9% at 55.5% 42.5%);
 
@@ -99,7 +104,8 @@
 }
 
 .planet4 {
-  animation-duration: 10s;
+  animation-duration: calc(0.4 * var(--longest-orbit-time));
+  animation-delay: calc(-0.85 * var(--longest-orbit-time));
 
   offset-path: ellipse(24.25% 7% at 55.5% 42.5%);
 

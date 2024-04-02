@@ -1,0 +1,19 @@
+#contact {
+  transition: transform ease-in-out 0.2s;
+
+  transform: translateY(100vh);
+}
+
+#contact-form-overlay {
+  transition: opacity ease-in-out 0.2s;
+  pointer-events: none;
+
+  opacity: 0;
+}
+
+#contact .contact-button:hover {
+  background-color: theme(colors.darkGunmetal / 20%);
+  transform: translateY(-1px);
+
+  @apply drop-shadow-md;
+}

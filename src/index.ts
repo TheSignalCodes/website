@@ -1,6 +1,6 @@
 import "./styles";
 
-document.addEventListener("DOMContentLoaded", () => {
+const setupMenu = () => {
   const openMenu = document.getElementById("open-menu");
   const closeMenu = document.getElementById("close-menu");
   const navigation = document.getElementById("navigation");
@@ -34,4 +34,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     previousScroll = currentScroll;
   });
+};
+
+const setupContactForm = () => {
+  const contactForm = document.getElementById("contact");
+  const contactOverlay = document.getElementById("contact-form-overlay");
+  const contactButtons = document.querySelectorAll(".contact-button");
+  const close = document.getElementById("close-contact-form");
+  const contactMessage = <HTMLTextAreaElement>(
+    document.getElementById("contact-message")
+  );
+  const contactMessageCharacterCount = <HTMLParagraphElement>(
+    document.getElementById("contact-message-character-count")
+  );
+
+  contactButtons.forEach((item) =>
+    item.addEventListener("click", () => {
+      contactOverlay.style.opacity = "100";
+      contactOverlay.style.pointerEvents = "all";
+      contactForm.style.transform = "translateY(0vh)";
+    }),
+  );
+
+  [contactOverlay, close].forEach((element) =>
+    element.addEventListener("click", () => {
+      contactOverlay.style.opacity = "0";
+      contactOverlay.style.pointerEvents = "none";
+      contactForm.style.transform = "translateY(100vh)";
+    }),
+  );
+
+  contactMessage.addEventListener("input", (ev) => {
+    contactMessageCharacterCount.innerText = `${contactMessage.value.length} / 225`;
+  });
+};
+
+const setupTransitions = () => {
+  const body = document.querySelector(".preload");
+
+  setTimeout(() => body.classList.remove("preload"), 100);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupTransitions();
+  setupMenu();
+  setupContactForm();
 });
