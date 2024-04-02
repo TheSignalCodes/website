@@ -6,3 +6,7 @@ node_modules
 
 # OS specific files
 .DS_Store
+
+# Test artifacts
+test-results
+playwright-report
