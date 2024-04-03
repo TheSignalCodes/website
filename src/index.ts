@@ -52,6 +52,7 @@ const setupContactForm = () => {
     item.addEventListener("click", () => {
       contactOverlay.style.opacity = "100";
       contactOverlay.style.pointerEvents = "all";
+      contactForm.style.opacity = "100";
       contactForm.style.transform = "translateY(0vh)";
     }),
   );
@@ -60,6 +61,7 @@ const setupContactForm = () => {
     element.addEventListener("click", () => {
       contactOverlay.style.opacity = "0";
       contactOverlay.style.pointerEvents = "none";
+      contactForm.style.opacity = "0";
       contactForm.style.transform = "translateY(100vh)";
     }),
   );
@@ -67,6 +69,9 @@ const setupContactForm = () => {
   contactMessage.addEventListener("input", (ev) => {
     contactMessageCharacterCount.innerText = `${contactMessage.value.length} / 225`;
   });
+
+  contactForm.classList.remove("hidden");
+  contactForm.classList.add("flex");
 };
 
 const setupTransitions = () => {

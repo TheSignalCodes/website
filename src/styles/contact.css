@@ -1,5 +1,7 @@
 #contact {
-  transition: transform ease-in-out 0.2s;
+  transition:
+    transform ease-in-out 0.2s,
+    opacity ease-in-out 0.2s;
 
   transform: translateY(100vh);
 }

@@ -19,28 +19,35 @@ export default defineConfig({
   },
   projects: [
     {
-      name: "chromium",
+      name: "Chrome",
       use: { ...devices["Desktop Chrome"] },
     },
     {
-      name: "firefox",
+      name: "Chrome XL",
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 3840, height: 2160 },
+      },
+    },
+    {
+      name: "Firefox",
       use: { ...devices["Desktop Firefox"] },
     },
     {
-      name: "webkit",
+      name: "Safari",
       use: { ...devices["Desktop Safari"] },
     },
     {
-      name: "edge",
+      name: "Edge",
       use: { ...devices["Desktop Edge"] },
     },
     {
-      name: "Mobile Safari",
+      name: "Mobile iOS",
       use: { ...devices["iPhone 13"] },
     },
     {
-      name: "Mobile Nexus",
-      use: { ...devices["Nexus 7"] },
+      name: "Mobile Android",
+      use: { ...devices["Pixel 7"] },
     },
   ],
   webServer: {

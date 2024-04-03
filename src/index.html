@@ -38,7 +38,7 @@
     </div>
 
     <div class="accent top-[350vh] lg:top-[3200px]">
-      <div class="-translate-x-[300px] lg:-translate-x-[15vw]"></div>
+      <div class="-translate-x-[300px] lg:mx-auto lg:-translate-x-[50%]"></div>
     </div>
 
     <div class="accent top-[350vh] hidden lg:top-[4600px] lg:block">
@@ -127,24 +127,13 @@
       </h3>
 
       <div
-        class="values-statue relative aspect-square w-full lg:absolute lg:-top-32 lg:right-0 lg:z-40 lg:w-[540px]"
+        class="relative aspect-square w-full overflow-hidden lg:absolute lg:-top-32 lg:right-0 lg:z-40 lg:w-[540px]"
       >
-        <div class="relative h-full w-full">
-          <div class="orbit orbit1 h-full w-full">
-            <div class="planet planet1"></div>
-          </div>
-
-          <div class="orbit orbit2 h-full w-full">
-            <div class="planet planet2"></div>
-          </div>
-
-          <div class="orbit orbit3 h-full w-full">
-            <div class="planet planet3"></div>
-          </div>
-
-          <div class="orbit orbit4 h-full w-full">
-            <div class="planet planet4"></div>
-          </div>
+        <div class="values-illustration relative h-full w-full">
+          <div id="mercury" class="planet"></div>
+          <div id="venus" class="planet"></div>
+          <div id="earth" class="planet"></div>
+          <div id="mars" class="planet"></div>
 
           <img class="absolute z-0" src="img/values_orbits.png" />
           <img class="absolute z-10" src="img/values_statue.png" />
@@ -471,10 +460,10 @@
 
     <section
       id="contact"
-      class="fixed inset-0 z-50 m-auto p-0 lg:inset-10 lg:p-1"
+      class="fixed inset-0 z-50 m-auto hidden items-center p-0 opacity-0 lg:inset-10 lg:p-1"
     >
       <div
-        class="flex h-full w-full flex-col overflow-clip bg-onyx lg:min-h-[600px] lg:flex-row lg:rounded-xl"
+        class="flex h-full w-full flex-col overflow-clip bg-onyx lg:h-fit lg:min-h-[600px] lg:flex-row lg:rounded-xl"
       >
         <div class="p-8 lg:flex-1 lg:p-20">
           <div class="overline"></div>

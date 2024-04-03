@@ -13,7 +13,7 @@
 .accent {
   mix-blend-mode: saturation;
 
-  @apply absolute -z-10 w-full overflow-x-hidden;
+  @apply absolute -z-10 w-full overflow-hidden;
 }
 
 .accent > div {
@@ -41,51 +41,28 @@
   }
 }
 
-.values-statue {
+.values-illustration {
   transform: scale(1.2) rotate(-35deg);
 }
 
-.orbit {
-  animation: hide linear infinite;
+.planet {
+  animation:
+    move linear infinite,
+    hide linear infinite;
   transform-style: preserve-3d;
   z-index: 1;
 
-  @apply absolute inset-0;
+  @apply absolute inset-0 rounded-full;
 }
 
-.planet {
-  animation: move linear infinite;
-
-  @apply absolute rounded-full;
-}
-
-.orbit1 {
-  animation-duration: var(--longest-orbit-time);
-}
-
-.orbit2 {
-  animation-duration: calc(0.8 * var(--longest-orbit-time));
-  animation-delay: calc(-0.25 * var(--longest-orbit-time));
-}
-
-.orbit3 {
-  animation-duration: calc(0.6 * var(--longest-orbit-time));
-  animation-delay: calc(-0.25 * var(--longest-orbit-time));
-}
-
-.orbit4 {
-  animation-duration: calc(0.4 * var(--longest-orbit-time));
-  animation-delay: calc(-0.85 * var(--longest-orbit-time));
-}
-
-.planet1 {
+#mercury {
   animation-duration: var(--longest-orbit-time);
   offset-path: ellipse(42.5% 13.25% at 55.5% 42.5%);
 
   @apply h-[16px] w-[16px] bg-redOrange;
 }
 
-.planet2 {
+#venus {
   animation-duration: calc(0.8 * var(--longest-orbit-time));
   animation-delay: calc(-0.25 * var(--longest-orbit-time));
 
@@ -94,7 +71,7 @@
   @apply h-[14px] w-[14px] bg-heatWave;
 }
 
-.planet3 {
+#earth {
   animation-duration: calc(0.6 * var(--longest-orbit-time));
   animation-delay: calc(-0.25 * var(--longest-orbit-time));
 
@@ -103,7 +80,7 @@
   @apply h-[10px] w-[10px] bg-sunnyDay;
 }
 
-.planet4 {
+#mars {
   animation-duration: calc(0.4 * var(--longest-orbit-time));
   animation-delay: calc(-0.85 * var(--longest-orbit-time));
 
