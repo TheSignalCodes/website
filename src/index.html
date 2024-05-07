@@ -497,13 +497,14 @@
             <img class="filter-white" src="img/close_white.svg" />
           </div>
 
-          <form class="flex flex-col lg:mt-32">
+          <form class="flex flex-col lg:mt-32" method="POST" action="https://formsubmit.co/de1b6c0af19f19db7fecb1c6df20dd59">
             <div class="relative">
               <img
                 src="img/full-name.svg"
                 class="absolute left-2.5 top-[0.8rem] lg:top-2.5"
               />
               <input
+                name="name"
                 id="full-name"
                 type="text"
                 class="text-md w-full rounded-sm bg-center p-2 pl-[2.25rem] text-darkGunmetal placeholder-arsenic lg:pl-8 lg:text-xs"
@@ -518,6 +519,7 @@
               />
               <input
                 type="email"
+                name="email"
                 class="text-md w-full rounded-sm p-2 pl-[2.25rem] text-darkGunmetal placeholder-arsenic lg:pl-8 lg:text-xs"
                 placeholder="Email"
               />
@@ -532,6 +534,7 @@
               </p>
               <textarea
                 id="contact-message"
+                name="message"
                 class="text-md min-h-40 w-full rounded-sm p-3 text-darkGunmetal placeholder-arsenic lg:min-h-24 lg:p-2 lg:text-xs"
                 maxlength="225"
                 placeholder="What do you want to talk about?"
