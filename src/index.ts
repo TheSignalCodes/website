@@ -36,33 +36,6 @@ const setupMenu = () => {
   });
 };
 
-const setupContactForm = () => {
-  const contactForm = document.getElementById("contact");
-  const contactOverlay = document.getElementById("contact-form-overlay");
-  const contactButtons = document.querySelectorAll(".contact-button");
-  const close = document.getElementById("close-contact-form");
-
-  contactButtons.forEach((item) =>
-    item.addEventListener("click", () => {
-      contactOverlay.style.opacity = "100";
-      contactOverlay.style.pointerEvents = "all";
-      contactForm.style.opacity = "100";
-      contactForm.style.transform = "translateY(0vh)";
-    }),
-  );
-
-  [contactOverlay, close].forEach((element) =>
-    element.addEventListener("click", () => {
-      contactOverlay.style.opacity = "0";
-      contactOverlay.style.pointerEvents = "none";
-      contactForm.style.opacity = "0";
-      contactForm.style.transform = "translateY(100vh)";
-    }),
-  );
-  contactForm.classList.remove("hidden");
-  contactForm.classList.add("flex");
-};
-
 const setupTransitions = () => {
   const body = document.querySelector(".preload");
 
@@ -72,5 +45,4 @@ const setupTransitions = () => {
 document.addEventListener("DOMContentLoaded", () => {
   setupTransitions();
   setupMenu();
-  setupContactForm();
 });

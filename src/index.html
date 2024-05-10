@@ -97,7 +97,7 @@
 
           <h1 class="mt-8 lg:mt-10">We develop exceptional products.</h1>
 
-          <button class="contact-button mt-8 w-fit lg:mt-20">Let's Talk</button>
+          <button class="contact-button mt-8 w-fit lg:mt-20" data-cal-link="thesignal/talk-to-us" data-cal-config='{"layout":"month_view"}'>Let's Talk</button>
         </div>
 
         <div class="lg:flex lg:flex-1 lg:items-center">
@@ -242,7 +242,8 @@
       </div>
 
       <div class="mt-12 flex justify-center">
-        <button class="contact-button">Let's Talk</button>
+        <button class="contact-button mt-8 w-fit lg:mt-20" data-cal-link="thesignal/talk-to-us"
+          data-cal-config='{"layout":"month_view"}'>Let's Talk</button>
       </div>
     </section>
 
@@ -436,7 +437,8 @@
       </h3>
 
       <div class="mt-10 flex justify-center lg:mt-32">
-        <button class="contact-button">Let's Talk</button>
+        <button class="contact-button mt-8 w-fit lg:mt-20" data-cal-link="thesignal/talk-to-us"
+          data-cal-config='{"layout":"month_view"}'>Let's Talk</button>
       </div>
 
       <div class="mt-10 flex flex-col items-center lg:mt-32">
@@ -452,65 +454,6 @@
       class="fixed inset-0 z-50 m-0 h-svh w-svw bg-black/50 backdrop-blur"
     ></div>
 
-    <section
-      id="contact"
-      class="fixed inset-0 z-50 m-auto hidden items-center p-0 opacity-0 lg:inset-10 lg:p-1"
-    >
-      <div
-        class="flex h-full w-full flex-col bg-onyx lg:h-fit lg:min-h-[600px] lg:flex-row lg:rounded-xl"
-      >
-        <div class="p-8 lg:flex-1 lg:p-20">
-          <div class="overline"></div>
-          <h2 class="mt-2">We are</h2>
-          <h2 class="text-cheese">The Signal.</h2>
-
-          <h3 class="mt-8 lg:mt-10">
-            Let's craft a unicorn together. Tell us what you want to achieve and
-            we'll become part of your team
-          </h3>
-
-          <!-- This block is repeated below, this one is displayed only in lg or larger sizes -->
-          <p class="mt-10 hidden text-xs text-lavenderGray lg:block">
-            We use the information provided in this form to contact you. We will
-            never share your data with third parties unless legally required.
-            You can exercise your right to manage your data by sending an email
-            to data@thesignal.com. Please reade our
-            <a href="" class="text-xs font-medium text-lavenderGray"
-              >Privacy Policy</a
-            >.
-          </p>
-        </div>
-
-        <div class="px-10 lg:flex-1 lg:bg-arsenic lg:p-16">
-          <div
-            id="close-contact-form"
-            class="absolute right-8 top-8 flex cursor-pointer flex-row items-center justify-end lg:relative lg:-mr-14 lg:-mt-14"
-            aria-label="Close contact form"
-          >
-            <p class="text-button mr-2">Close</p>
-            <img class="filter-white" src="img/close_white.svg" />
-          </div>
-
-
-          <!-- Cal inline embed code begins -->
-          <div class="flex flex-col lg:mt-12 overflow-y-auto" id="my-cal-inline"></div>
-          <script type="text/javascript">
-            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-            Cal("init", { origin: "https://cal.com" });
-
-            Cal("inline", {
-              elementOrSelector: "#my-cal-inline",
-              calLink: "thesignal/30min",
-              layout: "column_view"
-            });
-
-            Cal("ui", { "styles": { "branding": { "brandColor": "#000000" } }, "hideEventTypeDetails": false, "layout": "column_view" });
-          </script>
-          <!-- Cal inline embed code ends -->
-        </div>
-      </div>
-    </section>
-
     <footer class="mb-4 mt-10 flex flex-col items-center">
       <img src="img/footer_logo.png" class="w-1/3" />
       <p class="mt-4 text-xs font-bold">
@@ -519,3 +462,41 @@
     </footer>
   </body>
 </html>
+
+
+<!-- Cal element-click embed code begins -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", { origin: "https://cal.com", calLink: "pro" });
+
+  Cal("ui", 
+      { theme: "light",
+      hideEventTypeDetails: false,
+      cssVarsPerTheme: {
+        light: {
+          "cal-brand": "#ff7a00",
+          "cal-brand-emphasis": "#ff4600",
+          "cal-bg": "#1d2030",
+          "cal-bg-emphasis": "#333645",
+          "cal-bg-subtle": "#333645",
+          "cal-bg-muted": "#333645",
+          "cal-bgsuccess": "#333645",
+          "cal-border": "#1e2e3e",
+          "cal-border-emphasis": "#1e2e3e",
+          "cal-border-subtle": "#1e2e3e",
+          "cal-border-booker": "#1e2e3e",
+          "cal-border-muted": "#1e2e3e",
+          "cal-border-muted": "#error",
+          "cal-text": "#f8f8f8",
+          "cal-text-emphasis": "#f8f8f8",
+          "cal-text-muted": "#f8f8f8",
+          "cal-text-inverted": "#f8f8f8",
+          "cal-text-info": "#1d2030",
+          "cal-text-success": "#f8f8f8",
+          "cal-text-attention": "#f8f8f8",
+          "cal-text-error": "#f8f8f8",
+        },        
+      }
+    });
+</script>
+<!-- Cal element-click embed code ends -->
