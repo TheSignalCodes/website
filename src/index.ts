@@ -41,12 +41,6 @@ const setupContactForm = () => {
   const contactOverlay = document.getElementById("contact-form-overlay");
   const contactButtons = document.querySelectorAll(".contact-button");
   const close = document.getElementById("close-contact-form");
-  const contactMessage = <HTMLTextAreaElement>(
-    document.getElementById("contact-message")
-  );
-  const contactMessageCharacterCount = <HTMLParagraphElement>(
-    document.getElementById("contact-message-character-count")
-  );
 
   contactButtons.forEach((item) =>
     item.addEventListener("click", () => {
@@ -65,11 +59,6 @@ const setupContactForm = () => {
       contactForm.style.transform = "translateY(100vh)";
     }),
   );
-
-  contactMessage.addEventListener("input", (ev) => {
-    contactMessageCharacterCount.innerText = `${contactMessage.value.length} / 225`;
-  });
-
   contactForm.classList.remove("hidden");
   contactForm.classList.add("flex");
 };

@@ -315,10 +315,9 @@
           <h5>Initial Conversation</h5>
           <p class="mb-5">
             Reach out to us, and let us know what you need help with. We will
-            set up an
+            have an
             <b
-              >initial conversation in which we will discuss the scope of your
-              requirements.</b
+              >initial conversation in which we will discuss what do you want to accomplish.</b
             >
           </p>
 
@@ -406,7 +405,7 @@
 
     <section id="why-us" class="lg:flex lg:flex-col lg:items-center">
       <h5 class="text-center lg:max-w-[420px] lg:uppercase">
-        We’ve worked for top-tier Companies
+        We've worked with top-tier Companies
       </h5>
 
       <div class="logos">
@@ -443,7 +442,7 @@
       <div class="mt-10 flex flex-col items-center lg:mt-32">
         <img src="img/mail.svg" width="32px" />
         <a href="mailto:contact@thesignal.team" class="text-xl text-cultured"
-          >contact@thesignal.team</a
+          >hello@thesignal.team</a
         >
       </div>
     </section>
@@ -458,7 +457,7 @@
       class="fixed inset-0 z-50 m-auto hidden items-center p-0 opacity-0 lg:inset-10 lg:p-1"
     >
       <div
-        class="flex h-full w-full flex-col overflow-clip bg-onyx lg:h-fit lg:min-h-[600px] lg:flex-row lg:rounded-xl"
+        class="flex h-full w-full flex-col bg-onyx lg:h-fit lg:min-h-[600px] lg:flex-row lg:rounded-xl"
       >
         <div class="p-8 lg:flex-1 lg:p-20">
           <div class="overline"></div>
@@ -466,7 +465,7 @@
           <h2 class="text-cheese">The Signal.</h2>
 
           <h3 class="mt-8 lg:mt-10">
-            Let’s craft a unicorn together. Tell us what you want to achieve and
+            Let's craft a unicorn together. Tell us what you want to achieve and
             we'll become part of your team
           </h3>
 
@@ -492,68 +491,22 @@
             <img class="filter-white" src="img/close_white.svg" />
           </div>
 
-          <form class="flex flex-col lg:mt-32" method="POST" action="https://formsubmit.co/de1b6c0af19f19db7fecb1c6df20dd59">
-            <div class="relative">
-              <img
-                src="img/full-name.svg"
-                class="absolute left-2.5 top-[0.8rem] lg:top-2.5"
-              />
-              <input
-                name="name"
-                id="full-name"
-                type="text"
-                class="text-md w-full rounded-sm bg-center p-2 pl-[2.25rem] text-darkGunmetal placeholder-arsenic lg:pl-8 lg:text-xs"
-                placeholder="Full Name"
-              />
-            </div>
 
-            <div class="relative mt-4">
-              <img
-                src="img/email.svg"
-                class="absolute left-2.5 top-[0.85rem] lg:top-3"
-              />
-              <input
-                type="email"
-                name="email"
-                class="text-md w-full rounded-sm p-2 pl-[2.25rem] text-darkGunmetal placeholder-arsenic lg:pl-8 lg:text-xs"
-                placeholder="Email"
-              />
-            </div>
+          <!-- Cal inline embed code begins -->
+          <div class="flex flex-col lg:mt-12 overflow-y-auto" id="my-cal-inline"></div>
+          <script type="text/javascript">
+            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+            Cal("init", { origin: "https://cal.com" });
 
-            <div class="relative mt-4">
-              <p
-                id="contact-message-character-count"
-                class="text-md absolute bottom-2 right-2 text-arsenic opacity-50 lg:text-xs"
-              >
-                0 / 225
-              </p>
-              <textarea
-                id="contact-message"
-                name="message"
-                class="text-md min-h-40 w-full rounded-sm p-3 text-darkGunmetal placeholder-arsenic lg:min-h-24 lg:p-2 lg:text-xs"
-                maxlength="225"
-                placeholder="What do you want to talk about?"
-              ></textarea>
-            </div>
+            Cal("inline", {
+              elementOrSelector: "#my-cal-inline",
+              calLink: "thesignal/30min",
+              layout: "column_view"
+            });
 
-            <button
-              type="submit"
-              class="contact-button text-md mt-4 w-full self-center rounded-full border border-lavenderGray px-6 text-lavenderGray lg:w-fit lg:text-sm"
-            >
-              Submit
-            </button>
-          </form>
-
-          <!-- This block is repeated above, this one is displayed only in sizes smaller than lg -->
-          <p class="mt-10 block text-xs text-lavenderGray lg:hidden">
-            We use the information provided in this form to contact you. We will
-            never share your data with third parties unless legally required.
-            You can exercise your right to manage your data by sending an email
-            to data@thesignal.com. Please reade our
-            <a href="" class="text-xs font-medium text-lavenderGray"
-              >Privacy Policy</a
-            >.
-          </p>
+            Cal("ui", { "styles": { "branding": { "brandColor": "#000000" } }, "hideEventTypeDetails": false, "layout": "column_view" });
+          </script>
+          <!-- Cal inline embed code ends -->
         </div>
       </div>
     </section>
