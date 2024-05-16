@@ -21,7 +21,7 @@
 #services .card {
   flex: 0 0 75%;
 
-  @apply mr-5 rounded-lg bg-arsenic p-4;
+  @apply mr-5 rounded-lg bg-arsenic p-6;
 
   @media screen(md) {
     margin: 0;
