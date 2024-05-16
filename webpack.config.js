@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 ENTRY_PATH = path.resolve(__dirname, "src/index");
 DIST_PATH = path.resolve(__dirname, "dist");
@@ -27,7 +28,7 @@ module.exports = {
       {
         test: /\.css$/,
         include: path.resolve(__dirname, "src"),
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
     ],
   },
@@ -41,6 +42,9 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [{ from: PUBLIC_PATH, to: DIST_PATH }],
+    }),
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
     }),
   ],
   devtool: "source-map",
