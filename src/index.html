@@ -3,6 +3,7 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,12 +14,13 @@
     <meta name="description" content="The Signal - We build robust, scalable software systems at the heart of products your
         users love." />
     
+    <link rel="canonical" href="https://www.thesignal.team/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.thesignal.team/" />
     <meta property="og:title" content="The Signal" />
     <meta property="og:description" content="The Signal - We build robust, scalable software systems at the heart of products your
         users love." />
-    <meta property="og:image" itemprop="image" content="/img/brand.png" />
+    <meta property="og:image" itemprop="image" content="/img/brand.png" />    
     
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://www.thesignal.team/" />
@@ -68,9 +70,11 @@
     </div>
 
     <header class="relative z-50">
-      <div id="header">
+      <div id="header" itemscope itemtype="https://schema.org/Organization">
+        <meta itemprop="name" content="The Signal">
+        <link itemprop="url" href="https://www.thesignal.team/">
         <div class="background"></div>
-        <img src="/img/logo.svg" />
+        <img src="/img/logo.svg" alt="The Signal logo" itemprop="logo"/>
 
         <div id="open-menu" class="menu" aria-label="Open menu">
           <p class="text-button">Menu</p>
@@ -106,7 +110,7 @@
       </div>
 
       <footer>
-        <p>© 2024<br />The Signal. <br />All rights reserved.</p>
+        <p>© <span class="copyright-year">2025</span><br />The Signal. <br />All rights reserved.</p>
       </footer>
     </div>
 
@@ -197,41 +201,41 @@
       </div>
     </section>
 
-    <section id="services" class="px-0">
+    <section id="services" class="px-0" itemscope itemtype="https://schema.org/Service">
       <div
         class="flex flex-col justify-center px-4 lg:flex-row lg:items-center"
       >
         <div class="lg:flex-1">
-          <h4 class="uppercase">Our services</h4>
+          <h4 class="uppercase" itemprop="name">Our services</h4>
 
-          <h3 class="mt-5">
+          <h3 class="mt-5" itemprop="description">
             Our team has a proven track record of delivering solid solutions to
             complex problems.
           </h3>
         </div>
 
         <div class="lg:flex lg:flex-1 lg:justify-center">
-          <img class="mb-4 mt-10 w-full max-w-[400px]" src="/img/services.png" />
+          <img class="mb-4 mt-10 w-full max-w-[400px]" src="/img/services.png" itemprop="image" />
         </div>
       </div>
       <div class="cards">
-        <div class="card ml-4">
-          <img src="/img/tech_foundation.svg" />
+        <div class="card ml-4" itemscope itemtype="https://schema.org/Service">
+          <img src="/img/tech_foundation.svg" itemprop="image" />
 
-          <h6 class="mt-4">Technical Foundation</h6>
-          <p>
-            We evaluate different technologies and come up with the stack the
+          <h6 class="mt-4" itemprop="name">Technical Foundation</h6>
+          <p itemprop="description">
+            We evaluate different technologies and come up with the stack that
             fits your needs best. Then, we use it to implement an initial
             version of your system that is correct, performs well, and is easy
             to change, and operate.
           </p>
         </div>
 
-        <div class="card">
-          <img src="/img/architecture.svg" />
+        <div class="card" itemscope itemtype="https://schema.org/Service">
+          <img src="/img/architecture.svg" itemprop="image" />
 
-          <h6 class="mt-4">Architecture, Design, and Implementation</h6>
-          <p>
+          <h6 class="mt-4" itemprop="name">Architecture, Design, and Implementation</h6>
+          <p itemprop="description">
             We specialise in the construction of software systems, ensuring they
             are robust and scalable. From building data storage and processing
             pipelines, to designing and implementing APIs, integrations, and
@@ -239,22 +243,22 @@
           </p>
         </div>
 
-        <div class="card">
-          <img src="/img/legacy.svg" />
+        <div class="card" itemscope itemtype="https://schema.org/Service">
+          <img src="/img/legacy.svg" itemprop="image" />
 
-          <h6 class="mt-4">Improving Legacy</h6>
-          <p>
+          <h6 class="mt-4" itemprop="name">Improving Legacy</h6>
+          <p itemprop="description">
             We assess and transform dated infrastructures, enhancing their
             performance, correctness, testability, and maintainability to meet
             today's business demands.
           </p>
         </div>
 
-        <div class="card">
-          <img src="/img/processes.svg" />
+        <div class="card" itemscope itemtype="https://schema.org/Service">
+          <img src="/img/processes.svg" itemprop="image" />
 
-          <h6 class="mt-4">Building Teams and Processes</h6>
-          <p>
+          <h6 class="mt-4" itemprop="name">Building Teams and Processes</h6>
+          <p itemprop="description">
             Some of our members have extensive leadership experience and know
             how to build teams and processes that lead to
             improved developer productivity. We offer comprehensive
@@ -273,70 +277,90 @@
       <h4 class="w-2/3 uppercase lg:max-w-[260px]">Meet The Team</h4>
 
       <div class="lg:flex lg:flex-row lg:gap-4">
-        <div class="card lg:mt-24">
-          <img src="/img/miguel.png" alt="profile picture of Miguel"/>
+        <div class="card lg:mt-24" itemscope itemtype="https://schema.org/Person">
+          <img src="/img/miguel.png" alt="profile picture of Miguel" itemprop="image"/>
 
           <div class="relative -top-4 rounded-b-xl bg-onyx px-4 pt-2">
-            <h4>Miguel Fernández</h4>
+            <h4 itemprop="name">Miguel Fernández</h4>
+            <meta itemprop="jobTitle" content="Backend Engineer and Technical Leader">
+            <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+              <meta itemprop="name" content="The Signal">
+            </div>
             <p class="my-4">
             <b>Backend Engineer</b> and Technical Leader. He is specialized in building scalable, performant, and maintainable <b>backend systems and services</b>. 
             Recently, he has been focusing on <abbr title="Artificial Intelligence">AI</abbr> engineering to create innovative products.
             </p>
-            <a href="https://www.linkedin.com/in/miguelff">Miguel's LinkedIn profile</a>
+            <a href="https://www.linkedin.com/in/miguelff" itemprop="url">Miguel's LinkedIn profile</a>
           </div>
         </div>
 
-        <div class="card">
-          <img src="/img/abby.png" alt="profile picture of Abby Sassel"/>
+        <div class="card" itemscope itemtype="https://schema.org/Person">
+          <img src="/img/abby.png" alt="profile picture of Abby Sassel" itemprop="image"/>
 
           <div class="relative -top-4 rounded-b-xl bg-onyx px-4 pt-2">
-            <h4>Abby Sassel</h4>
+            <h4 itemprop="name">Abby Sassel</h4>
+            <meta itemprop="jobTitle" content="Full-Stack Engineer and Tech Lead">
+            <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+              <meta itemprop="name" content="The Signal">
+            </div>
             <p class="my-4">
               <b>Full-Stack Engineer</b> and Tech Lead, she is
               experienced in Functional Programming and building data-intensive systems. 
             </p>          
-            <a href="https://github.com/sassela">Abby's GitHub profile</a>
+            <a href="https://github.com/sassela" itemprop="url">Abby's GitHub profile</a>
           </div>
         </div>
 
-        <div class="card lg:mt-24">
-          <img src="/img/sergio.png" alt="profile picture of Sergio Gutiérrez"/>
+        <div class="card lg:mt-24" itemscope itemtype="https://schema.org/Person">
+          <img src="/img/sergio.png" alt="profile picture of Sergio Gutiérrez" itemprop="image"/>
 
           <div class="relative -top-4 rounded-b-xl bg-onyx px-4 pt-2">
-            <h4>Sergio Gutiérrez</h4>
+            <h4 itemprop="name">Sergio Gutiérrez</h4>
+            <meta itemprop="jobTitle" content="Full-stack and Mobile Engineer">
+            <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+              <meta itemprop="name" content="The Signal">
+            </div>
             <p class="my-4">
               <b>Full-stack and Mobile Engineer</b>. Sergio's skill set spans public <abbr
                 title="Application Programming Interface">API</abbr> development, <b>front-end</b> and <b>mobile development</b>, and <b>security
                 engineering</b>.
             </p>
-            <a href="https://www.linkedin.com/in/sergio-guti%C3%A9rrez-mota-b8b56063/">Sergio's LinkedIn profile</a>
+            <a href="https://www.linkedin.com/in/sergio-guti%C3%A9rrez-mota-b8b56063/" itemprop="url">Sergio's LinkedIn profile</a>
           </div>
         </div>
 
-        <div class="card">
-          <img src="/img/shraddha.png" alt="profile picture of shraddha"/>
+        <div class="card" itemscope itemtype="https://schema.org/Person">
+          <img src="/img/shraddha.png" alt="profile picture of Shraddha Agrawal" itemprop="image"/>
         
           <div class="relative -top-4 rounded-b-xl bg-onyx px-4 pt-2">
-            <h4>Shraddha Agrawal</h4>
+            <h4 itemprop="name">Shraddha Agrawal</h4>
+            <meta itemprop="jobTitle" content="Backend Engineer">
+            <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+              <meta itemprop="name" content="The Signal">
+            </div>
             <p class="my-4">
               <b>Backend Engineer</b>. Shraddha excels in backend engineering, software architecture, and database
               systems. With proficiency in <b>Golang</b>, she is used to building efficient and scalable cloud-native services. 
             </p>
-            <a href="https://www.linkedin.com/in/shraddhaag/">Shraddha's LinkedIn profile</a>
+            <a href="https://www.linkedin.com/in/shraddhaag/" itemprop="url">Shraddha's LinkedIn profile</a>
           </div>
         </div>
 
-        <div class="card lg:mt-24">
-          <img src="/img/ernesto.png" alt="profile picture of Ernesto"/>
+        <div class="card lg:mt-24" itemscope itemtype="https://schema.org/Person">
+          <img src="/img/ernesto.png" alt="profile picture of Ernesto Jiménez" itemprop="image"/>
 
           <div class="relative -top-4 rounded-b-xl bg-onyx px-4 pt-2">
-            <h4>Ernesto Jiménez</h4>
+            <h4 itemprop="name">Ernesto Jiménez</h4>
+            <meta itemprop="jobTitle" content="Backend Engineer and Technical Leader">
+            <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+              <meta itemprop="name" content="The Signal">
+            </div>
             <p class="my-4">
               <b>Backend Engineer</b> and <b>Technical Leader</b>. He received a Google
               Developer Expert award in the Go ecosystem, reflecting his
               <b>mastery of the language and its applications</b>.
             </p>
-            <a href="https://www.linkedin.com/in/ernestojimenez/">Ernesto's LinkedIn profile</a>
+            <a href="https://www.linkedin.com/in/ernestojimenez/" itemprop="url">Ernesto's LinkedIn profile</a>
           </div>
         </div>
       </div>
@@ -447,16 +471,46 @@
       </h5>
 
       <div class="logos">
-        <div class="logo"><img src="/img/github.png" /></div>
-        <div class="logo"><img src="/img/fastly.png" /></div>
-        <div class="logo"><img src="/img/neo4j.png" /></div>
-        <div class="logo"><img src="/img/hasura.png" /></div>
-        <div class="logo"><img src="/img/prisma.png" /></div>
-        <div class="logo"><img src="/img/topi.png" /></div>
-        <div class="logo"><img src="/img/harvest.png" /></div>
-        <div class="logo"><img src="/img/sketch.png" /></div>
-        <div class="logo"><img src="/img/ibm.png" /></div>
-        <div class="logo"><img src="/img/go_cardless.png" /></div>
+        <div class="logo" data-company="GitHub" itemscope itemtype="https://schema.org/Organization">
+          <img src="/img/github.png" alt="GitHub Logo" itemprop="logo" />
+          <meta itemprop="name" content="GitHub" />
+        </div>
+        <div class="logo" data-company="Fastly" itemscope itemtype="https://schema.org/Organization">
+          <img src="/img/fastly.png" alt="Fastly Logo" itemprop="logo" />
+          <meta itemprop="name" content="Fastly" />
+        </div>
+        <div class="logo" data-company="Neo4j" itemscope itemtype="https://schema.org/Organization">
+          <img src="/img/neo4j.png" alt="Neo4j Logo" itemprop="logo" />
+          <meta itemprop="name" content="Neo4j" />
+        </div>
+        <div class="logo" data-company="Hasura" itemscope itemtype="https://schema.org/Organization">
+          <img src="/img/hasura.png" alt="Hasura Logo" itemprop="logo" />
+          <meta itemprop="name" content="Hasura" />
+        </div>
+        <div class="logo" data-company="Prisma" itemscope itemtype="https://schema.org/Organization">
+          <img src="/img/prisma.png" alt="Prisma Logo" itemprop="logo" />
+          <meta itemprop="name" content="Prisma" />
+        </div>
+        <div class="logo" data-company="Topi" itemscope itemtype="https://schema.org/Organization">
+          <img src="/img/topi.png" alt="Topi Logo" itemprop="logo" />
+          <meta itemprop="name" content="Topi" />
+        </div>
+        <div class="logo" data-company="Harvest" itemscope itemtype="https://schema.org/Organization">
+          <img src="/img/harvest.png" alt="Harvest Logo" itemprop="logo" />
+          <meta itemprop="name" content="Harvest" />
+        </div>
+        <div class="logo" data-company="Sketch" itemscope itemtype="https://schema.org/Organization">
+          <img src="/img/sketch.png" alt="Sketch Logo" itemprop="logo" />
+          <meta itemprop="name" content="Sketch" />
+        </div>
+        <div class="logo" data-company="IBM" itemscope itemtype="https://schema.org/Organization">
+          <img src="/img/ibm.png" alt="IBM Logo" itemprop="logo" />
+          <meta itemprop="name" content="IBM" />
+        </div>
+        <div class="logo" data-company="GoCardless" itemscope itemtype="https://schema.org/Organization">
+          <img src="/img/go_cardless.png" alt="GoCardless Logo" itemprop="logo" />
+          <meta itemprop="name" content="GoCardless" />
+        </div>
       </div>
     </section>
 
@@ -478,11 +532,9 @@
           data-cal-config='{"layout":"month_view"}'>Let's Talk</button>
       </div>
 
-      <div class="mt-10 flex flex-col items-center lg:mt-32">
-        <img src="/img/mail.svg" width="32px" />
-        <a href="mailto:hello@thesignal.team" class="text-xl text-cultured"
-          >hello@thesignal.team</a
-        >
+      <div class="mt-10 flex flex-col items-center lg:mt-32" itemscope itemtype="https://schema.org/ContactPoint">        
+        <img src="/img/mail.svg" width="32px" itemprop="image" />
+        <a href="mailto:hello@thesignal.team" class="text-xl text-cultured" itemprop="email">hello@thesignal.team</a>        
       </div>
     </section>
 
@@ -494,7 +546,7 @@
     <footer class="mb-4 mt-10 flex flex-col items-center">
       <img src="/img/footer_logo.png" class="w-1/3" />
       <p class="mt-4 text-xs font-bold">
-        © 2024. The Signal. All rights reserved.
+        <span class="copyright-year">2025</span>. The Signal. All rights reserved.
       </p>
     </footer>
   </body>
@@ -535,5 +587,11 @@
         },        
       }
     });
+</script>
+<script>
+  const year = new Date().getFullYear();
+  document.querySelectorAll('.copyright-year').forEach(element => {
+    element.textContent = year;
+  });
 </script>
 <!-- Cal element-click embed code ends -->
