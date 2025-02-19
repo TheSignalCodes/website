@@ -26,7 +26,11 @@ const setupMenu = () => {
   window.addEventListener("scroll", () => {
     const currentScroll = window.scrollY;
 
-    if (previousScroll < currentScroll) {
+    const isWithinPageBounds =
+      currentScroll > 0 &&
+      currentScroll < document.body.scrollHeight - window.innerHeight;
+
+    if (isWithinPageBounds && previousScroll < currentScroll) {
       header.style.top = "-100px";
     } else {
       header.style.top = "0px";
