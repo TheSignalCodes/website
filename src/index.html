@@ -614,16 +614,6 @@
       class="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 backdrop-blur-sm"
     >
       <div class="relative mx-4 max-w-md rounded-xl bg-onyx p-8 text-center shadow-2xl">
-        <button
-          id="close-fully-booked"
-          class="absolute right-4 top-4 text-cultured hover:text-cheese transition-colors"
-          aria-label="Close notification"
-        >
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-        
         <div class="mb-6">
           <img src="/img/logo.svg" alt="The Signal logo" class="mx-auto mb-4 w-16"/>
           <h3 class="text-2xl font-bold text-cheese mb-2">We're Fully Booked!</h3>
@@ -636,17 +626,10 @@
         <div class="space-y-4">
           <p class="text-sm text-cultured/80">
             Want to be notified when we have availability? 
-            <a href="mailto:hello@thesignal.team" class="text-cheese hover:underline">
+            <a href="mailto:hola@mff.io" class="text-cheese hover:underline">
               Send us an email
             </a>
           </p>
-          
-          <button
-            id="dismiss-fully-booked"
-            class="w-full rounded-lg bg-cheese text-onyx font-medium py-3 px-6 hover:bg-cheese/90 transition-colors"
-          >
-            Got it
-          </button>
         </div>
       </div>
     </div>
@@ -668,44 +651,10 @@
 
   // Fully Booked Overlay functionality
   const fullyBookedOverlay = document.getElementById('fully-booked-overlay');
-  const closeButton = document.getElementById('close-fully-booked');
-  const dismissButton = document.getElementById('dismiss-fully-booked');
   
-  // Check if user has already dismissed the overlay
-  const hasSeenNotification = localStorage.getItem('fully-booked-dismissed');
-  
-  // Show overlay on page load if not dismissed before
-  if (!hasSeenNotification) {
-    // Small delay to ensure page is loaded
-    setTimeout(() => {
-      fullyBookedOverlay.classList.remove('hidden');
-    }, 1000);
-  } else {
-    fullyBookedOverlay.style.display = 'none';
-  }
-  
-  // Function to hide overlay and remember user's choice
-  function hideOverlay() {
-    fullyBookedOverlay.style.display = 'none';
-    localStorage.setItem('fully-booked-dismissed', 'true');
-  }
-  
-  // Event listeners for close buttons
-  closeButton.addEventListener('click', hideOverlay);
-  dismissButton.addEventListener('click', hideOverlay);
-  
-  // Close when clicking outside the modal
-  fullyBookedOverlay.addEventListener('click', (e) => {
-    if (e.target === fullyBookedOverlay) {
-      hideOverlay();
-    }
-  });
-  
-  // Close with Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && fullyBookedOverlay.style.display !== 'none') {
-      hideOverlay();
-    }
-  });
+  // Show overlay on page load
+  setTimeout(() => {
+    fullyBookedOverlay.classList.remove('hidden');
+  }, 1000);
 </script>
 <!-- Cal element-click embed code ends -->
