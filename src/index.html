@@ -599,7 +599,7 @@
 
       <div class="mt-10 flex flex-col items-center lg:mt-32" itemscope itemtype="https://schema.org/ContactPoint">        
         <img src="/img/mail.svg" width="32px" itemprop="image" />
-        <a href="mailto:hello@thesignal.team" class="text-xl text-cultured" itemprop="email">hello@thesignal.team</a>        
+        <a href="mailto:miguel@mff.io" class="text-xl text-cultured" itemprop="email">hello@thesignal.team</a>        
       </div>
     </section>
 
@@ -617,42 +617,6 @@
   </body>
 </html>
 
-
-<!-- Cal element-click embed code begins -->
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", { origin: "https://cal.com", calLink: "pro" });
-
-  Cal("ui", 
-      { theme: "light",
-      hideEventTypeDetails: false,
-      cssVarsPerTheme: {
-        light: {
-          "cal-brand": "#ff7a00",
-          "cal-brand-emphasis": "#ff4600",
-          "cal-bg": "#1d2030",
-          "cal-bg-emphasis": "#333645",
-          "cal-bg-subtle": "#333645",
-          "cal-bg-muted": "#333645",
-          "cal-bgsuccess": "#333645",
-          "cal-border": "#1e2e3e",
-          "cal-border-emphasis": "#1e2e3e",
-          "cal-border-subtle": "#1e2e3e",
-          "cal-border-booker": "#1e2e3e",
-          "cal-border-muted": "#1e2e3e",
-          "cal-border-muted": "#error",
-          "cal-text": "#f8f8f8",
-          "cal-text-emphasis": "#f8f8f8",
-          "cal-text-muted": "#f8f8f8",
-          "cal-text-inverted": "#f8f8f8",
-          "cal-text-info": "#1d2030",
-          "cal-text-success": "#f8f8f8",
-          "cal-text-attention": "#f8f8f8",
-          "cal-text-error": "#f8f8f8",
-        },        
-      }
-    });
-</script>
 <script>
   const year = new Date().getFullYear();
   document.querySelectorAll('.copyright-year').forEach(element => {
